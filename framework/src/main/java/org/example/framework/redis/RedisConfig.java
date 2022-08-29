@@ -1,4 +1,4 @@
-package org.example.model.framework.redis;
+package org.example.framework.redis;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
