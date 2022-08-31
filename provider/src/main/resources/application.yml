@@ -3,3 +3,11 @@ spring:
     active: dev
   application:
     name: provider
+
+server:
+  tomcat:
+    threads:
+      # Tomcat 最大线程数，默认200，根据需要调整
+      max: 500
+      # Tomcat 最小线程数，默认10，根据需要调整
+      min-spare: 10
