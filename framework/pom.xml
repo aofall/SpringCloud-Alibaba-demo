@@ -23,6 +23,7 @@
         <pagehelper.version>1.4.3</pagehelper.version>
         <guava.version>31.1-jre</guava.version>
         <caffeine.version>3.1.1</caffeine.version>
+        <jasypt.version>3.0.4</jasypt.version>
     </properties>
 
     <dependencies>
@@ -63,10 +64,28 @@
             <artifactId>spring-boot-starter</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
+        <!-- Spring Boot AOP -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <!-- Spring Boot Cache -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
         <!-- Spring Boot Web, includes Tomcat -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <!-- Spring Boot JDBC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
         <!-- Spring Boot Redis -->
@@ -96,7 +115,7 @@
         <dependency>
             <groupId>com.github.ulisesbocchio</groupId>
             <artifactId>jasypt-spring-boot-starter</artifactId>
-            <version>3.0.4</version>
+            <version>${jasypt.version}</version>
         </dependency>
 
         <dependency>
@@ -111,6 +130,7 @@
             <version>${guava.version}</version>
         </dependency>
 
+        <!-- loadbalancer使用caffeine缓存，暂不兼容3.x版本 -->
         <dependency>
             <groupId>com.github.ben-manes.caffeine</groupId>
             <artifactId>caffeine</artifactId>

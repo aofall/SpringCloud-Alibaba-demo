@@ -7,3 +7,22 @@ spring:
     url: jdbc:mysql://localhost:3306/customer?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: 123456
+  redis:
+    # Redis 单机配置
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    # Redis 哨兵配置
+    #sentinel:
+      # 主节点
+      #master:
+      # 从节点
+      #nodes:
+      # 哨兵集群密码
+      #password:
+    # Redis 集群配置
+    #cluster:
+      # 重定向最大数量,一般来说重定向一次就可以命中,但如果第一台挂了跳转第二台但未命中，就会再次重定向到第三台
+      #max-redirects:
+      # 从节点地址，List<String>
+      #nodes:
