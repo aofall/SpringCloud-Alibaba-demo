@@ -1,5 +1,6 @@
 package com.example.customer.client;
 
+import org.example.model.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -7,6 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface ProviderFeign {
 
     @GetMapping("/hello")
-    String hello();
+    Result<?> hello();
 
 }
